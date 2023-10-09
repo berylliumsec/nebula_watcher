@@ -76,7 +76,7 @@ To run nebula-watcher simply enter:
 ```bash 
 nebula-watcher
 ``` 
-Note that your plain-text nmap results should be in the a directory called results. The output diagram will be written into the current working directory.
+
 ## Options:
 
 --results_dir : Specify the directory containing NMAP scan results. (Default: ./results)
@@ -84,7 +84,12 @@ Note that your plain-text nmap results should be in the a directory called resul
 --clear_state : Use this flag if you want to start the script without using the previous state. This can be helpful for debugging purposes.
 --help: display the above options
 
-A state file named `state.json` is written to the current working directory to preserve states even when you close the monitoring tool.
+**IMPORTANT**
+
+**Note that your plain-text nmap results should be in the a directory called results. The output diagram will be written into the current working directory. You may have to zoom into the diagram if you have a lot of IP addresses with open ports**.
+
+**A state file named `state.json` is written to the current working directory to preserve states even when you close the monitoring tool.**
+
 ## How It Works
 
 - The script first parses the NMAP scan results to identify open ports on different IP addresses.

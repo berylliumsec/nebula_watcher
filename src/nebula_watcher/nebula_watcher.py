@@ -95,16 +95,16 @@ class Watcher:
 
 
 
-        def _parse_arguments(self):
-            parser = argparse.ArgumentParser(description='Hacking Coverage tool')
-            parser.add_argument('--results_dir', type=str, default='./results',
-                                help='Directory to retrieve command results.')
-            parser.add_argument('--diagram_name', type=str, default='ethical_hacking_activity',
-                                help='Name of the generated diagram.')
-            parser.add_argument('--clear_state', action='store_true',
-                                help='Clear the previous state and start fresh.')
+    def _parse_arguments(self):
+        parser = argparse.ArgumentParser(description='Hacking Coverage tool')
+        parser.add_argument('--results_dir', type=str, default='./results',
+                            help='Directory to retrieve command results.')
+        parser.add_argument('--diagram_name', type=str, default='ethical_hacking_activity',
+                            help='Name of the generated diagram.')
+        parser.add_argument('--clear_state', action='store_true',
+                            help='Clear the previous state and start fresh.')
 
-            return parser.parse_args()
+        return parser.parse_args()
 
 
 
