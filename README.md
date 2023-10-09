@@ -10,7 +10,9 @@ Welcome to the Nebula Watcher
 - [Why?](#why)
 - [Features](#features)
 - [Dependencies](#dependencies)
+- [Installation](#installation)
 - [Options](#options)
+- [How-it-works](#how-it-works)
 
 
 ## Acknowledgement
@@ -40,6 +42,7 @@ After connecting to port 443:
 ![After](/images/after_ethical_hacking_activity.png)
 
 ## Dependencies
+
 - [graphviz](https://graphviz.org/)
 - [Python3](https://www.python.org/downloads/)
 - [diagrams](https://github.com/mingrammer/diagrams)
@@ -92,11 +95,15 @@ nebula-watcher
 
 **IMPORTANT**
 
-Your plain-text NMAP results should be in the a directory called `results` in the current working directory of wherever you run nebula-watcher, if you dont pass a custom directory as an argument (see the above options for more information). Likewise the output diagram will be written into the current working directory to a file titled `ethical_hacking_activity.png` if you do not pass a custom filename (see the above options for more information). 
+Ensure that your plain-text NMAP results are located within a directory titled results situated in the current working directory. If you intend to utilize a custom directory, please reference the aforementioned options for guidance.
 
-You may have to zoom into the diagram if you have a lot of IP addresses with open ports.
+By default, the generated diagram will be saved in the current working directory with the name ethical_hacking_activity.png. However, you have the flexibility to specify an alternate filename, as detailed in the provided options.
 
-A state file named `state.json` is written to the current working directory to preserve states even when you close the monitoring tool.
+In cases where there is a significant number of IP addresses with open ports, it might be necessary to zoom into the diagram for clarity.
+
+The monitoring tool creates a state.json file in the current working directory. This ensures the preservation of states even post-closure of the monitoring tool.
+
+For accurate results, it is recommended to initiate Nebula-Watcher only after completing your general scans. Initiating beforehand may lead to the tool interpreting that all IPs and ports have been engaged during testing.
 
 ## How It Works
 
