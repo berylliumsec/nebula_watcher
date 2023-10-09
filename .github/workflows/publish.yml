@@ -65,6 +65,7 @@ jobs:
     
   pypi-docker-publish:
     runs-on: ubuntu-latest
+    environment: nebula_watcher
     needs: release-build
     permissions:
       id-token: write
