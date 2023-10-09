@@ -92,9 +92,9 @@ nebula-watcher
 
 **IMPORTANT**
 
-Your plain-text NMAP results should be in the a directory called results if you dont pass a custom directory as an argument (see the above options for more information). Likewise the output diagram will be written into the current working directory to a file titled `ethical_hacking_activity.png` if you do not pass a custom filename. 
+Your plain-text NMAP results should be in the a directory called `results` in the current working directory of wherever you run nebula-watcher, if you dont pass a custom directory as an argument (see the above options for more information). Likewise the output diagram will be written into the current working directory to a file titled `ethical_hacking_activity.png` if you do not pass a custom filename (see the above options for more information). 
 
-You may have to zoom into the diagram if you have a lot of IP addresses with open ports
+You may have to zoom into the diagram if you have a lot of IP addresses with open ports.
 
 A state file named `state.json` is written to the current working directory to preserve states even when you close the monitoring tool.
 
