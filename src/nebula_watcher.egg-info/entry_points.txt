@@ -1,0 +1,2 @@
+[console_scripts]
+nebula-watcher = nebula_watcher.nebula_watcher:main_func
