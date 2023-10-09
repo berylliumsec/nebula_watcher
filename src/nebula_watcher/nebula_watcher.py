@@ -53,14 +53,15 @@ class Watcher:
         # Define custom graph attributes for width and ratio
         graph_attributes = {
             "ratio": "1.5",  # Makes the diagram 1.5 times wider than its height
-            "rankdir": "LR"  # Left to Right
+            "rankdir": "LR",  # Left to Right
+            "ranksep": "2"  # Increase separation between ranks (layers) of the graph
         }
 
         # Define attributes for bolder nodes and edges
         node_attributes = {
-            "fontsize": "30",  # Increase font size for bolder text
-            "width": "1.5",  # Increase node width
-            "height": "1.5"   # Increase node height
+            "fontsize": "20",  # Increase font size for bolder text
+            "width": "1",  # Adjust node width
+            "height": "1"   # Adjust node height
         }
 
         edge_attributes = {
