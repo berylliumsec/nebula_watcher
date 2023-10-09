@@ -1,6 +1,6 @@
-# Nebula Watcher
+# Nebula-Watcher
 
-Welcome to the Nebula Watcher 
+Welcome to the Nebula-Watcher 
 
 ![nebula](/images/nebula_watcher.png)
 
@@ -11,6 +11,7 @@ Welcome to the Nebula Watcher
 - [Features](#features)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Options](#options)
 - [How-it-works](#how-it-works)
 
@@ -22,7 +23,7 @@ First i would like to thank the All-Mighty God who is the source of all knowledg
 
 ## Why?
 
-Nebula Watcher offers a method for ethical hackers to monitor the IP addresses and ports they've engaged with during a penetration test. It serves as a visual tool to ensure comprehensive coverage of all intended IP addresses and ports under examination.
+Nebula-Watcher offers a method for ethical hackers to monitor the IP addresses and ports they've engaged with during a penetration test. It serves as a visual tool to ensure comprehensive coverage of all intended IP addresses and ports under examination.
 
 ## Features
 
@@ -85,6 +86,10 @@ To run nebula-watcher simply enter:
 ```bash 
 nebula-watcher
 ``` 
+
+## Usage
+
+Utilizing Nebula-Watcher is straightforward. Simply execute the tool, whether through the installed pip package or Docker. It will then autonomously monitor the IP addresses and ports you've engaged.
 
 ## Options:
 
