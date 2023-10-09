@@ -48,7 +48,7 @@ After connecting to port 443:
 
 ## Installation
 
-The easiest way to get started is to use the docker image. Please note that the ZAP model is NOT supported in the docker image. If you would like to use ZAP please install the package using `pip`.
+The easiest way to get started is to use the docker image.
 
 
 **Docker**:
@@ -71,11 +71,12 @@ docker run --network host -v directory_that_contains_nmap_results/nmap_plain_tex
 pip install nebula-watcher
 ```
 
-To run nebula simply enter:
+To run nebula-watcher simply enter:
 
 ```bash 
 nebula-watcher
 ``` 
+Note that your plain-text nmap results should be in the a directory called results. The output diagram will be written into the current working directory.
 ## Options:
 
 --results_dir : Specify the directory containing NMAP scan results. (Default: ./results)
