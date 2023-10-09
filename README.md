@@ -92,7 +92,7 @@ nebula-watcher
 
 **IMPORTANT**
 
-Your plain-text NMAP results should be in the a directory called results if you dont pass a custom directory as an argument. Likewise the output diagram will be written into the current working directory to a file titled `ethical_hacking_activity.png` if you do not pass a custom filename. 
+Your plain-text NMAP results should be in the a directory called results if you dont pass a custom directory as an argument (see the above options for more information). Likewise the output diagram will be written into the current working directory to a file titled `ethical_hacking_activity.png` if you do not pass a custom filename. 
 
 You may have to zoom into the diagram if you have a lot of IP addresses with open ports
 
