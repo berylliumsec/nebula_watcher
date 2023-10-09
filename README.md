@@ -23,7 +23,7 @@ First i would like to thank the All-Mighty God who is the source of all knowledg
 
 ## Why?
 
-Nebula-Watcher offers a method for ethical hackers to monitor the IP addresses and ports they've engaged with during a penetration test. It serves as a visual tool to ensure comprehensive coverage of all intended IP addresses and ports under examination.
+Nebula-Watcher offers a method for ethical hackers to monitor the IP addresses and ports that they have engaged with during a penetration test. It serves as a visual tool to ensure comprehensive coverage of all intended IP addresses and ports under examination.
 
 ## Features
 
