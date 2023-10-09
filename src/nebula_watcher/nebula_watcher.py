@@ -47,25 +47,36 @@ class Watcher:
         state_file = 'state.json'
         with open(state_file, 'w') as file:
             json.dump(self.ip_port_color, file)
+
     def generate_diagram(self):
-                
+                    
         # Define custom graph attributes for width and ratio
         graph_attributes = {
-            "ratio": "auto",  # Makes use of the entire canvas
-            "size": "auto",  # Setting width to 30 units and height to 8 units; adjust as necessary
+            "ratio": "1.5",  # Makes the diagram 1.5 times wider than its height
             "rankdir": "LR"  # Left to Right
         }
 
-        with Diagram(self.args.diagram_name, show=False, direction="LR", graph_attr=graph_attributes):  # Top-level direction Left to Right
-            
+        # Define attributes for bolder nodes and edges
+        node_attributes = {
+            "fontsize": "30",  # Increase font size for bolder text
+            "width": "1.5",  # Increase node width
+            "height": "1.5"   # Increase node height
+        }
+
+        edge_attributes = {
+            "penwidth": "3"  # Increase line width for bolder arrows
+        }
+
+        with Diagram(self.args.diagram_name, show=False, direction="LR", graph_attr=graph_attributes, node_attr=node_attributes):  # Top-level direction Left to Right
+                
             # Create user icon/node
             user_node = Custom("User", self.ethical_hacker_png_path)
 
             # Outer cluster for IPs
             with Cluster("IP Addresses", direction="LR"):  # This cluster also expands Left to Right
-                
-                for ip_address, ports in self.ip_port_color.items():
                     
+                for ip_address, ports in self.ip_port_color.items():
+                        
                     # If there are no ports for an IP, continue to the next iteration
                     if not ports:
                         continue
@@ -73,7 +84,7 @@ class Watcher:
                     # Inner cluster for each IP to group it with its ports vertically
                     with Cluster(ip_address, direction="TB"):  # Expanding Top to Bottom for each IP
                         ip_node = Custom(ip_address, self.ip_png_path)
-                        
+                            
                         # Determine the color for the connection to the user
                         user_to_ip_color = "firebrick"
                         for _, color in ports.items():
@@ -81,16 +92,17 @@ class Watcher:
                                 user_to_ip_color = "green"
                                 break
 
-                        # Create an edge from user to the IP with the determined color and dashed style
-                        user_node >> Edge(color=user_to_ip_color, style="dashed") >> ip_node
-                        
+                        # Create an edge from user to the IP with the determined color, dashed style, and increased penwidth
+                        user_node >> Edge(color=user_to_ip_color, style="dashed", **edge_attributes) >> ip_node
+                            
                         for port, color in ports.items():
                             port_node = Custom(port, self.port_png_path)
-                            
-                            # Create an edge from IP to the port
-                            ip_node >> Edge(color=color, style="dashed") >> port_node
+                                
+                            # Create an edge from IP to the port with increased penwidth
+                            ip_node >> Edge(color=color, style="dashed", **edge_attributes) >> port_node
                         
         self._save_current_state()
+
 
 
 
