@@ -82,6 +82,7 @@ Note that your plain-text nmap results should be in the a directory called resul
 --results_dir : Specify the directory containing NMAP scan results. (Default: ./results)
 --diagram_name : Specify the name for the generated diagram. (Default: hacking_activity)
 --clear_state : Use this flag if you want to start the script without using the previous state. This can be helpful for debugging purposes.
+--help: display the above options
 
 A state file named `state.json` is written to the current working directory to preserve states even when you close the monitoring tool.
 ## How It Works
