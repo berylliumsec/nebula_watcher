@@ -7,7 +7,7 @@ Welcome to the Nebula Watcher
 
 ## Content
 - [Acknowledgement](#Acknowledgement)
-- [why?](#why)
+- [Why?](#why)
 - [Features](#features)
 - [Dependencies](#dependencies)
 - [Options](#options)
@@ -29,6 +29,8 @@ Nebula Watcher offers a method for ethical hackers to monitor the IP addresses a
 - Generates a visual diagram depicting the activity, with different colors indicating the type of connection.
 - Periodically updates the diagram, maintaining a history of the ethical hacking activity.
 
+**Example**
+
 Before connecting to port 443:
 
 ![Before](/images/before_ethical_hacking_activity.png)
@@ -38,7 +40,7 @@ After connecting to port 443:
 ![After](/images/after_ethical_hacking_activity.png)
 
 ## Dependencies
-- [graphviz] (https://graphviz.org/)
+- [graphviz](https://graphviz.org/)
 - [Python3](https://www.python.org/downloads/)
 - [diagrams](https://github.com/mingrammer/diagrams)
 - [psutil](https://psutil.readthedocs.io/en/latest/)
