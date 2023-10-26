@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='nebula-watcher',
-    version='0.3',
+    version='0.4',
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     package_data={
