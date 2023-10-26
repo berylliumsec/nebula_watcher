@@ -121,7 +121,10 @@ jobs:
           release_name: Release ${{ env.NEW_VERSION }}
           draft: false
           prerelease: false
-
+          body: |
+            Release Notes:
+              - In this release, CVE(s) are added to the specific ports in the diagrams if CVE(s) are detected in the NMAP results.
+              - Only XML NMAP formats are now supported.
       - name: Upload Release Assets
         if: github.event.pull_request.merged == true
         run: |
